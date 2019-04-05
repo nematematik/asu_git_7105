@@ -451,7 +451,7 @@ Ship = function () {
   };
 
 };
-<<<<<<< HEAD
+
 Ship = function () {
   this.init("ship",
             [-5,   4,
@@ -551,7 +551,7 @@ BigAlien = function () {
                           -6, -6,
                            6, -6,
                            8, -4]);
-=======
+
 Ship.prototype = new Sprite();
 
 BigAlien = function () {
@@ -571,22 +571,22 @@ BigAlien = function () {
         -6, -6,
         6, -6,
         8, -4]);
->>>>>>> alternative
+
   this.children.top.visible = true;
 
   this.children.bottom = new Sprite();
   this.children.bottom.init("bigalien_top",
-<<<<<<< HEAD
+
                             [ 8, 4,
                               6, 6,
                              -6, 6,
                              -8, 4]);
-=======
+
       [ 8, 4,
         6, 6,
         -6, 6,
         -8, 4]);
->>>>>>> alternative
+
   this.children.bottom.visible = true;
 
   this.collidesWith = ["asteroid", "ship", "bullet"];
@@ -751,7 +751,7 @@ AlienBullet.prototype = new Bullet();
 
 Asteroid = function () {
   this.init("asteroid",
-<<<<<<< HEAD
+
             [-10,   0,
               -5,   7,
               -3,   4,
@@ -762,7 +762,7 @@ Asteroid = function () {
                2, -10,
               -4, -10,
               -4,  -5]);
-=======
+
       [-10,   0,
         -5,   7,
         -3,   4,
@@ -773,7 +773,7 @@ Asteroid = function () {
         2, -10,
         -4, -10,
         -4,  -5]);
->>>>>>> alternative
+
 
   this.visible = true;
   this.scale = 6;
@@ -1056,18 +1056,18 @@ Game = {
         if (Game.sprites[i].name == 'asteroid') {
           Game.sprites[i].die();
         } else if (Game.sprites[i].name == 'bullet' ||
-<<<<<<< HEAD
+
                    Game.sprites[i].name == 'bigalien') {
-=======
+
             Game.sprites[i].name == 'bigalien') {
->>>>>>> alternative
+
           Game.sprites[i].visible = false;
         }
       }
 
       Game.score = 0;
       Game.lives = 2;
-      Game.totalAsteroids = 2;
+      Game.totalAsteroids = 4;
       Game.spawnAsteroids();
 
       Game.nextBigAlienTime = Date.now() + 30000 + (30000 * Math.random());
@@ -1246,7 +1246,7 @@ $(function () {
   // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
   window.requestAnimFrame = (function () {
     return  window.requestAnimationFrame       ||
-<<<<<<< HEAD
+
             window.webkitRequestAnimationFrame ||
             window.mozRequestAnimationFrame    ||
             window.oRequestAnimationFrame      ||
@@ -1254,7 +1254,7 @@ $(function () {
             function (/* function */ callback, /* DOMElement */ element) {
               window.setTimeout(callback, 1000 / 60);
             };
-=======
+
         window.webkitRequestAnimationFrame ||
         window.mozRequestAnimationFrame    ||
         window.oRequestAnimationFrame      ||
@@ -1262,7 +1262,7 @@ $(function () {
         function (/* function */ callback, /* DOMElement */ element) {
           window.setTimeout(callback, 1000 / 60);
         };
->>>>>>> alternative
+
   })();
 
   var mainLoop = function () {
